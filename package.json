@@ -1,0 +1,60 @@
+{
+  "name": "accessible-restaurant",
+  "version": "1.1.9",
+  "description": "NYC Wheelchair Friendly Restaurant Locator",
+  "keywords": [
+    "mapping",
+    "openlayers",
+    "nyc",
+    "New York",
+    "accessible",
+    "wheelchair",
+    "restaurant",
+    "DOHMH",
+    "MOPD"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "prebuild": "yarn roll-css",
+    "roll-css": "./node_modules/nyc-lib/css/roll-css.sh ./src/css/accessible-restaurant.theme.css ./src/css/accessible-restaurant.css",
+    "predeploy": "yarn build",
+    "deploy": "node deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timkeane/accessible-restaurant.git"
+  },
+  "author": "Tim Keane",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/timkeane/accessible-restaurant/issues"
+  },
+  "homepage": "https://github.com/timkeane/accessible-restaurant#readme",
+  "dependencies": {
+    "jquery": "^3.5.0",
+    "nyc-lib": "^1.4.62",
+    "ol": "^6.3.1",
+    "proj4": "^2.4.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "nyc-build-helper": "^0.0.45",
+    "postcss-clean": "^1.2.2",
+    "postcss-css-variables": "^0.18.0",
+    "postcss-import": "^14.0.2",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^3.3.11"
+  },
+  "resolutions": {
+    "**/**/postcss": "^8.2.13",
+    "**/**/ssri": "^6.0.2",
+    "**/**/glob-parent": "^5.1.2",
+    "**/**/serialize-javascript": "^3.1.0",
+    "**/**/ansi-regex": "^5.0.1"
+  }
+}
